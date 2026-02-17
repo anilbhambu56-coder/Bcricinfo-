@@ -275,3 +275,46 @@ footer{
 
 </body>
 </html>
+<script>
+const API_KEY = "YOUR_RAPIDAPI_KEY"; // yaha apni key daalo
+
+async function getLiveScore() {
+  try {
+    const response = await fetch(
+      "https://cricbuzz-cricket.p.rapidapi.com/matches/v1/live",
+      {
+        method: "GET",
+        headers: {
+          "X-RapidAPI-Key": API_KEY,
+          "X-RapidAPI-Host": "cricbuzz-cricket.p.rapidapi.com"
+        }
+      }
+    );
+
+    const data = await response.json();
+
+    // First live match data
+    const match = data.typeMatches[0].seriesMatches[0].seriesAdWrapper.matches[0].matchInfo;
+    const scoreData = data.typeMatches[0].seriesMatches[0].seriesAdWrapper.matches[0].matchScore;
+
+    const team1 = match.team1.teamName;
+    const team2 = match.team2.teamName;
+
+    const score1 = scoreData.team1Score.inngs1.runs + "/" +
+                   scoreData.team1Score.inngs1.wickets;
+
+    document.getElementById("liveScore").innerText =
+      team1 + " " + score1 + " vs " + team2;
+
+  } catch (error) {
+    document.getElementById("liveScore").innerText =
+      "Unable to fetch live score.";
+  }
+}
+
+// First load
+getLiveScore();
+
+// Auto refresh every 10 seconds
+setInterval(getLiveScore, 10000);
+  </script>
