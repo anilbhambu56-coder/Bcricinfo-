@@ -1,34 +1,97 @@
-<a href="https://wa.me/919783099290?text=Hi%20I%20need%20details" 
-target="_blank"
-style="
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:14px 18px;
-border-radius:50px;
-text-decoration:none;
-font-size:16px;
-z-index:999;">
-💬 WhatsApp Chat
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bhambu Digital Hub - WhatsApp Chatbot & Automation Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      background: #f4f4f4;
+    }
+
+    header {
+      background: #111;
+      color: white;
+      padding: 20px;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      background: white;
+      margin: 10px auto;
+      padding: 10px;
+      width: 80%;
+      border-radius: 8px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+    }
+
+    /* Floating WhatsApp Button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25D366;
+      color: white;
+      padding: 14px 18px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Bhambu Digital Hub</h1>
+  <p>WhatsApp Chatbot & Business Automation Solutions</p>
+</header>
+
+<div class="container">
+
+  <h2>Our Services</h2>
+
+  <ul>
+    <li>WhatsApp Chatbot Setup</li>
+    <li>Auto Reply System</li>
+    <li>Lead Generation Automation</li>
+    <li>Business WhatsApp Integration</li>
+  </ul>
+
+  <a class="btn" href="https://wa.me/919783099290?text=Hi%20I%20need%20WhatsApp%20bot%20for%20my%20business" target="_blank">
+    Contact on WhatsApp
+  </a>
+
+</div>
+
+<!-- Floating WhatsApp Button -->
+<a class="whatsapp-float" href="https://wa.me/919783099290?text=Hi%20I%20want%20details%20about%20Bhambu%20Digital%20Hub" target="_blank">
+💬 Chat
 </a>
-<h2>Contact Us</h2>
 
-<form onsubmit="sendToWhatsApp(); return false;">
-  <input id="name" placeholder="Your Name" required><br><br>
-  <input id="interest" placeholder="What do you need?" required><br><br>
-  <button type="submit">Send on WhatsApp</button>
-</form>
-
-<script>
-function sendToWhatsApp() {
-  let name = document.getElementById("name").value;
-  let interest = document.getElementById("interest").value;
-
-  let url = "https://wa.me/919783099290?text=" +
-    "Name: " + name + "%0AInterest: " + interest;
-
-  window.open(url, "_blank");
-}
-</script>
+</body>
+</html>
